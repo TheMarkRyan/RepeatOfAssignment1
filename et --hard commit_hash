@@ -1,0 +1,53 @@
+[33mcommit 21ff818750e63f6a01ab2a30af2246098bfa4a10[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Wed Oct 18 12:40:46 2023 +0100
+
+    Movie Details Page - included production countries.
+
+[33mcommit fc337b5b8e9db01405b3c8b8e435824138da0aad[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Wed Oct 18 12:30:26 2023 +0100
+
+    Movie Details Page rendering.
+
+[33mcommit 91346ac41ff2e0e981e96c1f162f0846c2324f2f[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Wed Oct 18 12:27:12 2023 +0100
+
+    Movie Details page components.
+
+[33mcommit 21b9476f97e598438e88e170a1eb3abfead88f24[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Tue Oct 17 12:52:53 2023 +0100
+
+    Home Page rendering.
+
+[33mcommit 02074dd26ed8bc8103916eefa43f86c2abd79cf0[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Tue Oct 17 12:29:11 2023 +0100
+
+    Installed Storybook
+
+[33mcommit f3461d8f4cb58338b63dce6a4bc82fd5fedc8ca1[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Tue Oct 17 11:37:23 2023 +0100
+
+    Installed Storybook
+
+[33mcommit 5eb3ed9c4f88751ab5920fcffe9e6cc9deadb0ee[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Fri Oct 13 15:56:34 2023 +0100
+
+    Installed Storybook
+
+[33mcommit 5d529a1077a754467cfd35223c6beaac582051a7[m
+Author: TheMarkRyan <20098241@mail.wit.ie>
+Date:   Fri Oct 13 14:46:47 2023 +0100
+
+    movie lab 1 - new app created
+
+[33mcommit c9605c3ff6a2b5a9128e4aa79183159841d0cfbb[m
+Author: TheMarkRyan <91595716+TheMarkRyan@users.noreply.github.com>
+Date:   Fri Oct 13 14:27:42 2023 +0100
+
+    Initial commit
