@@ -15,7 +15,7 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import NowPlayingMoviesPage from './pages/NowPlayingMoviesPage';
 import TrendingMoviesPage from './pages/TrendingMoviesPage';
 
-// Create a client for React Query
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -28,6 +28,7 @@ const queryClient = new QueryClient({
 
 const App = () => {
   return (
+    <div style={{ border: '40px solid maroon', minHeight: '100vh', backgroundColor: '#000221', boxSizing: 'border-box', margin: 0 }}>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <SiteHeader />
@@ -45,9 +46,9 @@ const App = () => {
           <Route path="/movies/popular" element={<PopularMoviesPage />} />
         </Routes>
       </BrowserRouter>
-      {/* React Query Devtools for debugging */}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
+    </div>
   );
 };
 

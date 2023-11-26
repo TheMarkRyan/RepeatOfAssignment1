@@ -54,8 +54,10 @@ export default function FilterMoviesCard(props) {
     <Card 
       sx={{
         maxWidth: 345,
-        backgroundColor: "rgb(204, 204, 0)"
+        backgroundColor: "maroon",
+        height: 1000
       }} 
+      
       variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h1">

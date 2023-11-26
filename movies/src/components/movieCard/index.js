@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -17,16 +17,33 @@ import Avatar from '@mui/material/Avatar';
 
 export default function MovieCard(props) {
   const movie = props.movie;
+  const navigate = useNavigate(); 
+
   const handleAddToFavorite = (e) => {
     e.preventDefault();
-    props.selectFavorite(movie.id);
+
+    
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.some(favMovie => favMovie.id === movie.id)) {
+      
+      favorites.push(movie);
+    } else {
+      
+      favorites = favorites.filter(favMovie => favMovie.id !== movie.id);
+    }
+
+   
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+
+
   };
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
           movie.favorite ? (
-            <Avatar sx={{ backgroundColor: 'red' }}>
+            <Avatar sx={{ backgroundColor: 'red' } }>
               <FavoriteIcon />
             </Avatar>
           ) : null
