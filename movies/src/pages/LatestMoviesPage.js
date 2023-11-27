@@ -3,6 +3,7 @@ import { getNowPlayingMovies } from '../api/tmdb-api';
 import MovieList from '../components/movieList';
 import FilterMoviesCard from '../components/filterMoviesCard';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 const LatestMoviesPage = () => {
   const [movies, setMovies] = useState([]);
@@ -45,15 +46,17 @@ const LatestMoviesPage = () => {
 
   return (
     <Box sx={{ display: 'flex', maxWidth: '100vw' }}>
-      <Box sx={{ width: 250, position: 'fixed', height: '100vh', overflowY: 'auto' }}>
-        <FilterMoviesCard onSearch={handleSearch} />
-      </Box>
-      <Box sx={{ pl: 25, width: 'calc(100% - 250px)', overflowY: 'auto' }}>
-        <h2>Latest Movies</h2>
-        <MovieList movies={moviesToShow} />
-      </Box>
+        <Box sx={{ width: 250, position: 'fixed', height: '100vh', overflowY: 'auto' }}>
+            <FilterMoviesCard onSearch={handleSearch} />
+        </Box>
+        <Box sx={{ pl: 25, width: 'calc(100% - 250px)', overflowY: 'auto', textAlign: 'center' }}>
+            <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
+                Latest Movies
+            </Typography>
+            <MovieList movies={moviesToShow} />
+        </Box>
     </Box>
-  );
+);
 };
 
 export default LatestMoviesPage;

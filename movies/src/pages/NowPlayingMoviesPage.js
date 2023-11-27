@@ -3,6 +3,7 @@ import { getNowPlayingMovies } from '../api/tmdb-api';
 import MovieList from '../components/movieList';
 import FilterMoviesCard from '../components/filterMoviesCard';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 const NowPlayingMoviesPage = () => {
     const [movies, setMovies] = useState([]);
