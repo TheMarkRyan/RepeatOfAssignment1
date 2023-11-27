@@ -44,7 +44,7 @@ const SiteHeader = () => {
 
   return (
     <>
-      <AppBar position="fixed" style={{ backgroundColor: 'maroon' }}> {/* Changed to maroon */}
+      <AppBar position="fixed" style={{ backgroundColor: 'maroon' }}>/
         <Toolbar>
           <IconButton
             edge="start"

@@ -83,4 +83,12 @@ export const getTopRatedMovies = () => {
   ).then(res => res.json());
 };
 
+export const searchMovies = (query) => {
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&query=${encodeURIComponent(query)}&page=1&include_adult=false`;
+  return fetch(url)
+    .then(res => res.json())
+    .then(json => json.results);
+};
+
+
 

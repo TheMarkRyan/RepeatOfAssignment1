@@ -28,7 +28,7 @@ const queryClient = new QueryClient({
 
 const App = () => {
   return (
-    <div style={{ border: '40px solid maroon', minHeight: '100vh', backgroundColor: '#000221', boxSizing: 'border-box', margin: 0 }}>
+    <div style={{border: '40px solid maroon', minHeight: '100vh', backgroundColor: 'rgb(255,255,255)', boxSizing: 'border-box'}}>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <SiteHeader />

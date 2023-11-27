@@ -17,6 +17,7 @@ const FavoriteMoviesPage = () => {
         <FilterMoviesCard/>
       </Box>
       <Box sx={{ width: '75%', ml: '25%', overflowY: 'auto', pt: 3 }}>
+      <h2>Favourite Movies</h2>
         <MovieList movies={favorites} selectFavorite={() => {}} />
       </Box>
     </Box>
