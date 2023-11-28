@@ -1,15 +1,18 @@
-export const getMovies = () => {
-  return fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&include_video=false&page=1`
-  ).then((response) => {
-    if (!response.ok) {
-      throw new Error(response.json().message);
-    }
-    return response.json();
-  })
-  .catch((error) => {
-     throw error
-  });
+export const getMovies = (genre = '') => {
+  let url = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&include_video=false&page=1`;
+  if (genre) {
+    url += `&with_genres=${genre}`;
+  }
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(response.json().message);
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw error;
+    });
 };
   
   export const getMovie = id => {
@@ -90,5 +93,12 @@ export const searchMovies = (query) => {
     .then(json => json.results);
 };
 
+export const getMovieRecommendations = (movieId) => {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+  )
+  .then(res => res.json())
+  .then(json => json.results);
+};
 
 

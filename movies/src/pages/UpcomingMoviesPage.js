@@ -15,7 +15,7 @@ const UpcomingMoviesPage = () => {
     getUpcomingMovies()
       .then(data => {
         setMovies(data);
-        setFilteredMovies(data); // Set filteredMovies initially to all movies
+        setFilteredMovies(data); 
       })
       .catch(error => {
         setError(error);
@@ -46,15 +46,17 @@ const UpcomingMoviesPage = () => {
 
   return (
     <Box sx={{ display: 'flex', maxWidth: '100vw' }}>
-      <Box sx={{ width: 250, position: 'fixed', height: '100vh', overflowY: 'auto' }}>
-        <FilterMoviesCard onSearch={handleSearch} />
-      </Box>
-      <Box sx={{ pl: 25, width: 'calc(100% - 250px)', overflowY: 'auto' }}>
-        <h2>Upcoming Movies</h2>
-        <MovieList movies={moviesToShow} />
-      </Box>
+        <Box sx={{ width: 250, position: 'fixed', height: '100vh', overflowY: 'auto' }}>
+            <FilterMoviesCard onSearch={handleSearch} />
+        </Box>
+        <Box sx={{ pl: 25, width: 'calc(100% - 250px)', overflowY: 'auto', textAlign: 'center' }}>
+            <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
+                Upcoming Movies
+            </Typography>
+            <MovieList movies={moviesToShow} />
+        </Box>
     </Box>
-  );
+);
 };
 
 export default UpcomingMoviesPage;

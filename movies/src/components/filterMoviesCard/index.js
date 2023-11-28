@@ -1,7 +1,7 @@
-import React from "react";
-import { useQuery } from "react-query";
+import React from 'react';
+import { useQuery } from 'react-query';
 import Spinner from '../spinner';
-import { getGenres } from "../../api/tmdb-api";
+import { getGenres } from '../../api/tmdb-api';
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -11,28 +11,11 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import CardMedia from "@mui/material/CardMedia";
-import img from '../../images/filterMovies.png'; // Ensure this path is correct
+import img from '../../images/filterMovies.png';
 
 const FilterMoviesCard = ({ onSearch, onFilter }) => {
   const { data: genresData, error, isLoading, isError } = useQuery("genres", getGenres);
-  const FilterMoviesCard = ({ genres, onGenreChange }) => {
-    return (
-      <FormControl fullWidth>
-        <InputLabel id="genre-label">Genre</InputLabel>
-        <Select
-          labelId="genre-label"
-          id="genre-select"
-          onChange={onGenreChange}
-          defaultValue=""
-        >
-          <MenuItem value=""><em>All Genres</em></MenuItem>
-          {genres.map(genre => (
-            <MenuItem key={genre.id} value={genre.id}>{genre.name}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    );
-  };
+
   if (isLoading) {
     return <Spinner />;
   }
@@ -46,7 +29,6 @@ const FilterMoviesCard = ({ onSearch, onFilter }) => {
   const handleTextChange = (e) => {
     onSearch(e.target.value);
   };
-  
 
   const handleGenreChange = (e) => {
     onFilter(e.target.value);

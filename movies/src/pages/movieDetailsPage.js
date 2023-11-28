@@ -3,11 +3,13 @@ import { useParams } from 'react-router-dom';
 import MovieDetails from "../components/movieDetails/";
 import PageTemplate from "../components/templateMoviePage";
 import useMovie from "../hooks/useMovie";
+import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 
 const MoviePage = (props) => {
   const { id } = useParams();
   const [movie] = useMovie(id);
+  
 
   return (
     <>
@@ -15,6 +17,7 @@ const MoviePage = (props) => {
         <>
           <PageTemplate movie={movie}>
             <MovieDetails movie={movie} />
+            <Link to={`/movies/${movie.id}/recommendations`}>View Recommendations</Link>
           </PageTemplate>
         </>
       ) : (

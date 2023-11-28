@@ -1,3 +1,43 @@
+## Assignment 1 - ReactJS app.
+
+Name: Mark Ryan
+
+## Overview
+
+This repository contains my Web App Development 2 assignment 1. It is built off of the react-movie-labs I did as part of the module. It is launched with "npm start" in the following folder: D:\webappdev2\Assignment1\TMDB-React-Assignment1\movies and is hosted locally.
+
+It is a movie fan application built off of the TMDB (The Movie DataBase) API. I used fetches to the API to access the lists of movies by category and functions such as search by name and favouriting. 
+
+
+## Features
+
++ Made the favouriting system functional.
++ Made filter movie component's search functional (could not figure out genre filtering)
++ Added multiple new API endpoints, made the search function work independently for each. Eg when you use earch bar in Trending Movies, it only searches through movies in that page.
++ Made changes to css like background colors and images.
++ Changed the site header to include a drop down button instead of having multiple buttons along the menu bar for navigation.
++ Added a movie recommendations section to movie details page.
++ Could not figure out how to search by actors or connect actors to movies.
++ Could not figure out how to use Firebase or pagination.
+
+## API endpoints
+ + Route path="/movies/latest" 
+ + Movie Review Page: /reviews/:id" 
+ + Top Rated Movies Page="/movies/top_rated" 
+  Favourite Movies Page="/movies/favorites" 
++ Movies Now Playing in Cinema Page="/movies/now_playing" 
++ Recommended Movies: "/movies/:id/recommendations"
++ Upcoming Movies Page="/movies/upcoming" 
++ The Home Page:="/"  
+ + Trending Movies Page:="/movies/trending" 
+
+## Independent Learning
++ Used StackOverFlow for troubleshooting and guidance.
++ Used ChatGPT for troubleshooting e.g explaining errors I received in understandable terminology and telling me where the errors are and how to fix them.
++ Used https://www.rapidtables.com/web/color/RGB_Color.html for RGB values when doing CSS. 
++ Used ChatGPT to help get search function in D:\webappdev2\Assignment1\TMDB-React-Assignment1\movies\src\components\filterMoviesCard component to only search movies exclusive to each page. 
++ 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,57 +54,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

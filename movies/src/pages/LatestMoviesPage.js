@@ -14,7 +14,7 @@ const LatestMoviesPage = () => {
   useEffect(() => {
     getNowPlayingMovies().then(data => {
       setMovies(data.results);
-      setFilteredMovies(data.results); // Initially, filteredMovies is the same as movies
+      setFilteredMovies(data.results); 
     }).catch(error => {
       setError(error);
     });
@@ -25,7 +25,7 @@ const LatestMoviesPage = () => {
     if (!query) {
       setFilteredMovies(movies);
     } else {
-      // Filter the existing movies array
+    
       const filtered = movies.filter(movie => 
         movie.title.toLowerCase().includes(query.toLowerCase())
       );
@@ -41,7 +41,7 @@ const LatestMoviesPage = () => {
     return <div>Loading...</div>;
   }
 
-  // Render the movies that match the search term
+  
   const moviesToShow = searchTerm ? filteredMovies : movies;
 
   return (
