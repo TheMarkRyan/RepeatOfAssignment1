@@ -9,10 +9,11 @@ const UpcomingMoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState('');
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    getUpcomingMovies()
+    getUpcomingMovies(selectedGenre) 
       .then(data => {
         setMovies(data);
         setFilteredMovies(data); 
@@ -20,7 +21,7 @@ const UpcomingMoviesPage = () => {
       .catch(error => {
         setError(error);
       });
-  }, []);
+  }, [selectedGenre]); 
 
   const handleSearch = (query) => {
     setSearchTerm(query);
@@ -32,6 +33,10 @@ const UpcomingMoviesPage = () => {
       );
       setFilteredMovies(filtered);
     }
+  };
+
+  const handleGenreChange = (genreId) => {
+    setSelectedGenre(genreId);
   };
 
   if (error) {
@@ -47,7 +52,7 @@ const UpcomingMoviesPage = () => {
   return (
     <Box sx={{ display: 'flex', maxWidth: '100vw' }}>
         <Box sx={{ width: 250, position: 'fixed', height: '100vh', overflowY: 'auto' }}>
-            <FilterMoviesCard onSearch={handleSearch} />
+            <FilterMoviesCard onSearch={handleSearch} onFilter={handleGenreChange} />
         </Box>
         <Box sx={{ pl: 25, width: 'calc(100% - 250px)', overflowY: 'auto', textAlign: 'center' }}>
             <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
@@ -56,7 +61,7 @@ const UpcomingMoviesPage = () => {
             <MovieList movies={moviesToShow} />
         </Box>
     </Box>
-);
+  );
 };
 
 export default UpcomingMoviesPage;
